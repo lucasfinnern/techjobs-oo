@@ -21,6 +21,7 @@ public class JobData {
 
 
     private JobData() {
+
         JobDataImporter.loadData(this);
     }
 
@@ -42,6 +43,7 @@ public class JobData {
     }
 
     public ArrayList<Job> findAll() {
+
         return jobs;
     }
 
@@ -83,6 +85,7 @@ public class JobData {
 
 
     public void add(Job job) {
+
         jobs.add(job);
     }
 

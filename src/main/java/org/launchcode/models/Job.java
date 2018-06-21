@@ -1,5 +1,11 @@
 package org.launchcode.models;
 
+import java.util.ArrayList;
+import org.launchcode.models.data.JobData;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 /**
  * Created by LaunchCode
  */
@@ -8,7 +14,10 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
+    @NotNull
+    @Size(min = 1, message = "Name must not be empty")
     private String name;
+
     private Employer employer;
     private Location location;
     private PositionType positionType;
